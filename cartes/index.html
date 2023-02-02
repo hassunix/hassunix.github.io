@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jeux de cartes</title>
+  <style>
+    #card-display {
+  width: 100vw;
+  height: 80vh;
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+#card-display img {
+  width: 100%;
+  height: 100%;
+}
+
+#draw-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}  </style>
+</head>
+<body>
+  <div id="card-display">
+    <img id="selected-card" src="">
+  </div>
+  <button id="draw-button">Tirer une carte</button>
+  <script>
+    const cards = ["https://i.postimg.cc/HnwmyDwr/IMG-4255.jpg",
+"https://i.postimg.cc/4ykZyN9C/IMG-4256.jpg",
+"https://i.postimg.cc/pVzR78wP/IMG-4257.jpg",
+"https://i.postimg.cc/L6VR4S47/IMG-4258.jpg",
+"https://i.postimg.cc/TYxfX1xg/IMG-4259.jpg",
+"https://i.postimg.cc/2S8YVtV5/IMG-4260.jpg",
+"https://i.postimg.cc/Qt5G2Gnf/IMG-4261.jpg",
+"https://i.postimg.cc/NjJcTxHk/IMG-4262.jpg",
+"https://i.postimg.cc/NFcqYJ3B/IMG-4263.jpg",
+"https://i.postimg.cc/q7WHDMQt/IMG-4264.jpg",
+"https://i.postimg.cc/Xvr0gyKS/IMG-4265.jpg",
+"https://i.postimg.cc/pVfMkvjT/IMG-4266.jpg",
+"https://i.postimg.cc/5NfdRr5m/IMG-4267.jpg",
+"https://i.postimg.cc/NjMhgrz9/IMG-4268.jpg",
+"https://i.postimg.cc/fRgGkTGH/IMG-4269.jpg",
+"https://i.postimg.cc/vB5kP7cj/IMG-4270.jpg",
+"https://i.postimg.cc/j2K9BWfj/IMG-4271.jpg",
+"https://i.postimg.cc/XNctd8MB/IMG-4272.jpg",
+"https://i.postimg.cc/kGcZCnNv/IMG-4273.jpg",
+"https://i.postimg.cc/zXz6jg5t/IMG-4274.jpg",
+"https://i.postimg.cc/vH0jSZZQ/IMG-4275.jpg",
+"https://i.postimg.cc/2S3JpN1n/IMG-4276.jpg",
+"https://i.postimg.cc/VkThmZtp/IMG-4277.jpg",
+"https://i.postimg.cc/FKLBRbgR/IMG-4278.jpg",
+"https://i.postimg.cc/qRcDckFH/IMG-4279.jpg",
+"https://i.postimg.cc/fLQg03Bv/IMG-4280.jpg",
+"https://i.postimg.cc/T1R7Cz8L/IMG-4281.jpg",
+"https://i.postimg.cc/5ynPGs1P/IMG-4282.jpg",
+"https://i.postimg.cc/3xPtP45H/IMG-4283.jpg",
+"https://i.postimg.cc/sgBn6PLc/IMG-4284.jpg",
+"https://i.postimg.cc/BZgwXnDx/IMG-4285.jpg",
+"https://i.postimg.cc/cHcTgFKs/IMG-4286.jpg",
+"https://i.postimg.cc/QxCSCkj3/IMG-4287.jpg",
+"https://i.postimg.cc/Hk724YJv/IMG-4288.jpg",
+"https://i.postimg.cc/wTr2myBs/IMG-4289.jpg",
+"https://i.postimg.cc/0NRCVTDk/IMG-4290.jpg",
+"https://i.postimg.cc/MTzmS19g/IMG-4291.jpg",
+"https://i.postimg.cc/FKyV8TVj/IMG-4292.jpg",
+];
+
+    const display = document.getElementById("selected-card");
+display.src = "https://i.postimg.cc/vZVKHFs9/Whats-App-Image-2023-02-01-at-18-48-12.jpg";
+    const drawButton = document.getElementById("draw-button");
+
+    drawButton.addEventListener("click", function() {
+      const randomIndex = Math.floor(Math.random() * cards.length);
+      const randomCard = cards[randomIndex];
+      display.src = randomCard;
+    });
+  </script>
+</body>
+</html>
